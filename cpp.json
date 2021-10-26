@@ -1,0 +1,31 @@
+{
+  "namespace": {
+    "prefix": "namespace",
+    "body": ["namespace $1 {", "", "$0", "", "} // namespace $1"]
+  },
+
+  "header guard": {
+    "prefix": "hguard",
+    "body": ["#ifndef $1", "#define $1", "", "$0", "", "#endif // $1"]
+  },
+
+  "class declaration": {
+    "prefix": "classdecl",
+    "body": ["class $1 {", "  private:", "    $0", "", "  public:", "", "};"]
+  },
+
+  "function prototype": {
+    "prefix": "function",
+    "body": ["${1:r-type} ${2:name}(${args})$0"]
+  },
+
+  "class method implementation": {
+    "prefix": "classmethodimpl",
+    "body": [
+      "${1:r-type} ${2:class-name}::${3:method-name}(${args}) {",
+      "  $0",
+      "}",
+      ""
+    ]
+  }
+}
