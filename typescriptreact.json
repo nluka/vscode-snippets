@@ -1,0 +1,51 @@
+{
+  "ES5 Function": {
+    "prefix": "es5f",
+    "body": ["function ${1:name}(${2:args}) {", "  $0", "}"],
+    "description": "ES5 Function"
+  },
+
+  "ES6 Arrow Function": {
+    "prefix": "af",
+    "body": ["const ${1:name} = (${2:args}) => {", "  $0", "};"],
+    "description": "ES6 Arrow Function"
+  },
+
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "interface IProps {",
+      "  $2",
+      "}",
+      "",
+      "export default function ${1:name}(props: IProps) {",
+      "  return (",
+      "    <$3>",
+      "      $0",
+      "    </$3>",
+      "  );",
+      "};",
+      ""
+    ],
+    "description": "React Functional Component"
+  },
+
+  "React Functional Component No Props": {
+    "prefix": "rfcnp",
+    "body": [
+      "import React from 'react';",
+      "",
+      "export default function ${1:name}() {",
+      "  return (",
+      "    <$2>",
+      "      $0",
+      "    <$2/>",
+      "  );",
+      "};",
+      ""
+    ],
+    "description": "React Functional Component"
+  }
+}
