@@ -6,7 +6,7 @@
 
   "header guard": {
     "prefix": "header guard",
-    "body": ["#ifndef $1", "#define $1", "", "$0", "", "#endif // $1"]
+    "body": ["#ifndef $1", "#define $1", "", "$0", "", "#endif // $1", ""]
   },
 
   "class declaration": {
