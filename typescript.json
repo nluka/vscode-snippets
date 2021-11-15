@@ -1,13 +1,11 @@
 {
   "ES5 Function": {
-    "prefix": "es5f",
-    "body": ["function ${1:name}(${2:args}) {", "  $0", "}"],
-    "description": "ES5 Function"
+    "prefix": "func",
+    "body": ["function ${1:name}(${2:/* args */}) {", "  $0", "}", ""]
   },
 
   "ES6 Arrow Function": {
-    "prefix": "af",
-    "body": ["const ${1:name} = (${2:args}) => {", "  $0", "};"],
-    "description": "ES6 Arrow Function"
+    "prefix": "afunc",
+    "body": ["const ${1:name} = (${2:/* args */}) => {", "  $0", "};", ""]
   }
 }

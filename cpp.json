@@ -1,28 +1,45 @@
 {
-  "namespace": {
-    "prefix": "namespace",
+  "Namespace": {
+    "prefix": "ns",
     "body": ["namespace $1 {", "", "$0", "", "} // namespace $1"]
   },
 
-  "header guard": {
-    "prefix": "header guard",
+  "Header Huard": {
+    "prefix": "hg",
     "body": ["#ifndef $1", "#define $1", "", "$0", "", "#endif // $1", ""]
   },
 
-  "class declaration": {
-    "prefix": "classdecl",
+  "Header Shell (Guard + Namespace)": {
+    "prefix": "hs",
+    "body": [
+      "#ifndef $1",
+      "#define $1",
+      "",
+      "namespace $2 {",
+      "",
+      "$0",
+      "",
+      "} // namespace $2",
+      "",
+      "#endif // $1",
+      ""
+    ]
+  },
+
+  "Class Declaration": {
+    "prefix": "cd",
     "body": ["class $1 {", "  private:", "    $0", "", "  public:", "", "};"]
   },
 
-  "function prototype": {
-    "prefix": "function",
-    "body": ["${1:return_type} ${2:name}(${args})$0"]
+  "Function Prototype": {
+    "prefix": "fp",
+    "body": ["${1:void} ${2:name}(${3:/* args */})$0"]
   },
 
-  "class method implementation": {
-    "prefix": "classmethodimpl",
+  "Class Method Implementation": {
+    "prefix": "cmi",
     "body": [
-      "${1:return_type} ${2:class_name}::${3:method_name}(${4:args})$5 {",
+      "${1:void} ${2:Class}::${3:method}(${4:/* args */}) {",
       "  $0",
       "}",
       ""

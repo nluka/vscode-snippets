@@ -1,11 +1,11 @@
 {
-  "header guard": {
-    "prefix": "header guard",
+  "Header Guard": {
+    "prefix": "hg",
     "body": ["#ifndef $1", "#define $1", "", "$0", "", "#endif // $1", ""]
   },
 
-  "function prototype": {
-    "prefix": "function",
-    "body": ["${1:return_type} ${2:name}(${args})$0"]
+  "Function Prototype": {
+    "prefix": "fp",
+    "body": ["${1:void} ${2:name}(${3:/* args */})$0"]
   }
 }

@@ -1,14 +1,12 @@
 {
   "ES5 Function": {
-    "prefix": "es5f",
-    "body": ["function ${1:name}(${2:args}) {", "  $0", "}"],
-    "description": "ES5 Function"
+    "prefix": "func",
+    "body": ["function ${1:name}(${2:args}) {", "  $0", "}", ""]
   },
 
   "ES6 Arrow Function": {
-    "prefix": "af",
-    "body": ["const ${1:name} = (${2:args}) => {", "  $0", "};"],
-    "description": "ES6 Arrow Function"
+    "prefix": "afunc",
+    "body": ["const ${1:name} = (${2:/* args */}) => {", "  $0", "};", ""]
   },
 
   "React Functional Component": {
@@ -20,7 +18,7 @@
       "  $2",
       "}",
       "",
-      "export default function ${1:name}(props: IProps) {",
+      "export default function ${1:Name}(props: IProps) {",
       "  return (",
       "    <$3>",
       "      $0",
@@ -28,24 +26,22 @@
       "  );",
       "};",
       ""
-    ],
-    "description": "React Functional Component"
+    ]
   },
 
-  "React Functional Component No Props": {
+  "React Functional Component (No Props)": {
     "prefix": "rfcnp",
     "body": [
       "import React from 'react';",
       "",
-      "export default function ${1:name}() {",
+      "export default function ${1:Name}() {",
       "  return (",
       "    <$2>",
       "      $0",
-      "    <$2/>",
+      "    </$2>",
       "  );",
       "};",
       ""
-    ],
-    "description": "React Functional Component"
+    ]
   }
 }
