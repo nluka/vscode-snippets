@@ -1,12 +1,12 @@
 {
   "ES5 Function": {
     "prefix": "func",
-    "body": ["function ${1:name}(${2:args}) {", "  $0", "}", ""]
+    "body": ["function ${1:name}(${2:/*args*/}) {", "  $0", "}", ""]
   },
 
   "ES6 Arrow Function": {
     "prefix": "afunc",
-    "body": ["const ${1:name} = (${2:/* args */}) => {", "  $0", "};", ""]
+    "body": ["const ${1:name} = (${2:/*args*/}) => {", "  $0", "};", ""]
   },
 
   "React Functional Component": {

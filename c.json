@@ -6,6 +6,6 @@
 
   "Function Prototype": {
     "prefix": "fp",
-    "body": ["${1:void} ${2:name}(${3:/* args */})$0"]
+    "body": ["${1:void} ${2:name}(${3:/*args*/})$0"]
   }
 }

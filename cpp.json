@@ -33,13 +33,13 @@
 
   "Function Prototype": {
     "prefix": "fp",
-    "body": ["${1:void} ${2:name}(${3:/* args */})$0"]
+    "body": ["${1:void} ${2:name}(${3:/*args*/})$0"]
   },
 
   "Class Method Implementation": {
     "prefix": "cmi",
     "body": [
-      "${1:void} ${2:Class}::${3:method}(${4:/* args */}) {",
+      "${1:void} ${2:Class}::${3:method}(${4:/*args*/}) {",
       "  $0",
       "}",
       ""
